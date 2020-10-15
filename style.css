@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Yanone+Kaffeesatz:wght@600&display=swap');
+
+/* Variables */
+html {
+
+    --dark-bg: #0c1718;
+    --light-bg: #f7f7f7;
+
+    --dark-text: #000000;
+    --light-text: #ffffff;
+    
+    /* steel blue  #4682b4*/
+    --bepop-primary: 207, 44%, 49%;  
+    /* salmon pink #ffa07a*/
+    --bepop-secondary: 17, 100%, 72%;
+    
+    /* maize crayola #f1c84b */
+    --champloo-primary: 45, 86%, 62%;
+    /* fire opal #eb5247 */
+    --champloo-secondary: 4, 80%, 60%;
+    
+    /* rose pink #ff61ca */
+    --dandy-primary: 320, 100%, 69%;
+    /* aquamarine #61ffe2 */
+    --dandy-secondary: 169, 100%, 69%;
+
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+    /* TODO: media queries and fade in effects */
+}
+*, *:before, *:after {
+box-sizing: inherit;
+margin: 0;
+padding: 0;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    overflow-y: hidden;
+    display: flex;
+    overflow-x: scroll;
+    /* width: 400vw; */
+}
+.slide {
+    height: 100vh;
+    min-width: 100vw;
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1rem solid var(--dark-bg);
+    scroll-snap-align: start;
+}
+.main {
+    position: relative;
+}
+.main img {
+    filter: brightness(.7);
+    border-radius: .3em;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    z-index: 0;
+    /* box-shadow:
+    1px -1px 1px #61ffe2,
+    2px -1px 1px #61ffe2,
+    -1px 1px 1px #ff61ca,
+    -1px 1px 1px #ff61ca; */
+}
+.main span {
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+/* Look for a different font face for name */
+.main .first-name, .main .last-name {
+    position: absolute;
+    color: var(--light-text);
+    opacity: 1;
+    font-size: 2.75em;
+    text-transform: uppercase;
+    text-shadow: 
+    1px 1px 1px #61ffe2,
+    2px 2px 1px #61ffe2,
+    -1px -1px 1px #ff61ca,
+    -1px -2px 1px #ff61ca
+    ;
+    z-index: 99;
+}
+.main .first-name {
+    top: 49%;
+    /* left: 21%; */
+    left: 16%;
+}
+.main .last-name {
+    top: 63%;
+    left: 32%;
+}
+
+.scroll-indicator {
+    color: var(--light-text);
+    font-size: 1.5em;
+    position: absolute;
+    left: 95%;
+    animation: bounce 1.5s infinite ease-in forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    25% {
+        opacity: .5;
+    }
+    50% {
+        transform: translateX(80%);
+        opacity: 1;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+}
+
+/* Page backgrounds */
+
+.bepop {
+    background: linear-gradient(
+        215deg,
+        hsla(var(--bepop-secondary), 0.7) 15%,
+        hsla(var(--bepop-primary), 0.6) 54%),
+        url("images/bepop_background.svg");
+    background-size: cover;
+}
+.champloo {
+    background: linear-gradient(
+        220deg,
+        hsla(var(--champloo-primary), 0.4),
+        hsla(var(--champloo-secondary), 0.6) 58%),
+        url("images/champloo_background.svg");
+}
+.dandy {
+    background: linear-gradient(
+        220deg,
+        hsla(var(--dandy-secondary), 0.5) 42%,
+        hsla(var(--dandy-primary), 0.6) 70%),
+        url("images/dandy_background.svg");
+    background-size: cover;
+}
+
+/* Card and contents of card */
+.card {
+    display: flex;
+    padding: 1.4rem 2.4rem;
+    height: 55vh;
+    width: 40vw;
+    font-size: 12px;
+    line-height: 1.6em;
+    letter-spacing: .1em;
+    color: white;
+    background: var(--dark-bg);
+    border-radius: 1rem;
+    box-shadow: 0 0 1.2rem .2rem hsla(182, 0%, 0%, 0.6);
+    opacity: 0;
+    /* transform: scale(.6); */
+}
+.fade-in {
+    opacity: 0.8;
+    /* transform: scale(1); */
+    transition: all 450ms ease-in;
+}
+.thumbnail {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    /* align-self: flex-end; */
+    /* margin: auto; */
+}
+.title {
+    font-size: 2.6em;
+    font-family: 'Yanone Kaffeesatz', 'sans-serif';
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+}
+.year {
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.8em;
+}
+.studio {
+    padding-top: .7em;
+}
+.studio ~ span {
+    padding-top: .3em;
+}
+.description {
+    padding-top: .7em;
+    padding-bottom: .7em;
+}
+
+/* Cowboy Bepop Card */
+.bepop > .card {
+    background: var(--dark-bg);
+    color: var(--light-text);
+}
+.card-bepop {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-bepop .title {
+    color: hsl(var(--bepop-primary));
+}
+.card-bepop .year {
+    color: hsl(var(--bepop-secondary));
+}
+.card-bepop h1::selection, .card-bepop span::selection, .card-bepop p::selection, .thumbnail-bepop img::selection {
+    color: var(--light-text);
+    background: hsla(var(--bepop-primary), 0.8);
+}
+.thumbnail-bepop {
+    margin-left: auto;
+}
+
+/* Samurai Champloo Card */
+.card-champloo {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-champloo .title {
+    color: hsl(var(--champloo-secondary));
+}
+.card-champloo .year {
+    color: hsl(var(--champloo-primary));
+}
+.card-champloo h1::selection, .card-champloo span::selection, .card-champloo p::selection, .thumbnail-champloo img::selection {
+    color: var(--dark-text);
+    background: hsla(var(--champloo-secondary), 0.8);
+}
+.thumbnail-champloo {
+    margin-left: auto;
+}
+
+/* Space Dandy Card */
+.card-dandy {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-dandy .title {
+    color: hsl(var(--dandy-primary));
+}
+.card-dandy .year {
+    color: hsl(var(--dandy-secondary));
+}
+.card-dandy h1::selection, .card-dandy span::selection, .card-dandy p::selection, .thumbnail-dandy img::selection {
+    color: var(--light-text);
+    background: hsla(var(--dandy-primary), 0.8);
+}
+.thumbnail-dandy {
+    margin-left: auto;
+}
