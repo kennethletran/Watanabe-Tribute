@@ -24,3 +24,5 @@ cards.forEach(card => {
     appearOnScroll.observe(card);
 })
 
+
+// Type in name

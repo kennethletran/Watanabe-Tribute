@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Yanone+Kaffeesatz:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@600&display=swap');
 /* Variables */
 html {
 
@@ -7,7 +6,7 @@ html {
     --light-bg: #f7f7f7;
 
     --dark-text: #000000;
-    --light-text: #ffffff;
+    --light-text: #dddcdc;
     
     /* steel blue  #4682b4*/
     --bepop-primary: 207, 44%, 49%;  
@@ -25,7 +24,7 @@ html {
     --dandy-secondary: 169, 100%, 69%;
 
     font-size: 16px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -33,14 +32,24 @@ html {
     
     /* TODO: media queries and fade in effects */
 }
+/* Resets */
 *, *:before, *:after {
 box-sizing: inherit;
 margin: 0;
 padding: 0;
 }
+
 ::-webkit-scrollbar {
-    width: 0;
+    height: .25em;
 }
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+::-webkit-scrollbar-track-piece:start, ::-webkit-scrollbar-thumb {
+    background: var(--light-bg);
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -48,7 +57,6 @@ body {
     overflow-y: hidden;
     display: flex;
     overflow-x: scroll;
-    /* width: 400vw; */
 }
 .slide {
     height: 100vh;
@@ -80,21 +88,35 @@ body {
     font-size: 1.5em;
     opacity: 0;
 }
-
-/* Look for a different font face for name */
+.main .changing {
+    font-family: 'Quicksand', sans-serif;
+    opacity: 1;
+    color: var(--light-text);
+    position: absolute;
+    z-index: 99;
+    top: 24%;
+    left: 24%;
+    letter-spacing: .05em;
+    font-size: 2em;
+}
 .main .first-name, .main .last-name {
     position: absolute;
     color: var(--light-text);
     opacity: 1;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2.75em;
+    font-weight: 600;
+    letter-spacing: .375em;
     text-transform: uppercase;
     text-shadow: 
-    1px 1px 1px #61ffe2,
-    2px 2px 1px #61ffe2,
-    -1px -1px 1px #ff61ca,
-    -1px -2px 1px #ff61ca
+    1px 1px 2px #61ffe2,
+    -1px -1px 2px #ff61ca
     ;
     z-index: 99;
+}
+.main .first-name::selection, .main .last-name::selection, .main .changing::selection {
+    color: var(--dark-text);
+    background: var(--light-bg);
 }
 .main .first-name {
     top: 49%;
@@ -111,6 +133,7 @@ body {
     font-size: 1.5em;
     position: absolute;
     left: 95%;
+    top: 90%;
     animation: bounce 1.5s infinite ease-in forwards;
 }
 
@@ -162,6 +185,7 @@ body {
 }
 
 /* Card and contents of card */
+
 .card {
     display: flex;
     padding: 1.4rem 2.4rem;
@@ -186,14 +210,11 @@ body {
     width: 175px;
     height: 175px;
     border-radius: 50%;
-    /* align-self: flex-end; */
-    /* margin: auto; */
 }
 .title {
     font-size: 2.6em;
     font-family: 'Yanone Kaffeesatz', 'sans-serif';
     font-weight: 600;
-    letter-spacing: 0em;
     text-transform: uppercase;
 }
 .year {
