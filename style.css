@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@300;600&family=Bebas+Neue&family=Poiret+One&display=swap');
 /* Variables */
 html {
 
@@ -7,7 +7,9 @@ html {
 
     --dark-text: #000000;
     --light-text: #dddcdc;
-    
+    --primary-title: #fb2d2d;
+
+
     /* steel blue  #4682b4*/
     --bepop-primary: 207, 44%, 49%;  
     /* salmon pink #ffa07a*/
@@ -40,7 +42,7 @@ padding: 0;
 }
 
 ::-webkit-scrollbar {
-    height: .25em;
+    height: .2em;
 }
 ::-webkit-scrollbar-track {
     opacity: 0;
@@ -68,6 +70,9 @@ body {
     border: 1rem solid var(--dark-bg);
     scroll-snap-align: start;
 }
+
+/* Landing Page */
+
 .main {
     position: relative;
 }
@@ -89,15 +94,43 @@ body {
     opacity: 0;
 }
 .main .changing {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     opacity: 1;
     color: var(--light-text);
     position: absolute;
-    z-index: 99;
+    /* z-index: 99; */
     top: 24%;
-    left: 24%;
-    letter-spacing: .05em;
+    left: 8%;
+    letter-spacing: .1em;
     font-size: 2em;
+    z-index: 99;
+}
+.main .changing::after {
+    content:'';
+    position: absolute;
+    font-family: 'Poiret One', 'cursive';
+    color: var(--primary-title);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: .5em;  
+    animation: change 5s infinite ease-in-out forwards;
+}
+@keyframes change {
+    0% {
+        content:'director';
+    }
+    25% {
+        content:'visionary';
+    }
+    50% {
+        content:'pioneer';
+    }
+    75% {
+        content:'legend';
+    }
+    100% {
+        content: 'director';
+    }
 }
 .main .first-name, .main .last-name {
     position: absolute;
@@ -108,10 +141,7 @@ body {
     font-weight: 600;
     letter-spacing: .375em;
     text-transform: uppercase;
-    text-shadow: 
-    1px 1px 2px #61ffe2,
-    -1px -1px 2px #ff61ca
-    ;
+    text-shadow: 0px 1px 1px var(--primary-title);
     z-index: 99;
 }
 .main .first-name::selection, .main .last-name::selection, .main .changing::selection {
@@ -127,7 +157,6 @@ body {
     top: 63%;
     left: 32%;
 }
-
 .scroll-indicator {
     color: var(--light-text);
     font-size: 1.5em;
@@ -136,7 +165,6 @@ body {
     top: 90%;
     animation: bounce 1.5s infinite ease-in forwards;
 }
-
 @keyframes bounce {
     0% {
         transform: translateX(10%);
