@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@300;600&family=Bebas+Neue&family=Poiret+One&display=swap');
+
 /* Variables */
 html {
 
@@ -7,7 +8,7 @@ html {
 
     --dark-text: #000000;
     --light-text: #dddcdc;
-    --primary-title: #fb2d2d;
+    --main-color: #fb2d2d;
 
 
     /* steel blue  #4682b4*/
@@ -29,7 +30,8 @@ html {
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
     
     /* TODO: media queries and fade in effects */
@@ -41,14 +43,16 @@ margin: 0;
 padding: 0;
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar {
     height: .2em;
+    width: .2em
 }
 ::-webkit-scrollbar-track {
     opacity: 0;
 }
 ::-webkit-scrollbar-track-piece:start, ::-webkit-scrollbar-thumb {
-    background: var(--light-bg);
+    background: var(--main-color);
 }
 
 
@@ -56,9 +60,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--dark-bg);
-    overflow-y: hidden;
-    display: flex;
-    overflow-x: scroll;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    /* display: flex; */
+    /* overflow-x: scroll; */
+    overflow-y: scroll;
 }
 .slide {
     height: 100vh;
@@ -72,7 +78,6 @@ body {
 }
 
 /* Landing Page */
-
 .main {
     position: relative;
 }
@@ -80,8 +85,8 @@ body {
     filter: brightness(.7);
     border-radius: .3em;
     position: absolute;
-    top: 3em;
-    left: 50%;
+    top: 9%;
+    left: 59%;
     z-index: 0;
     /* box-shadow:
     1px -1px 1px #61ffe2,
@@ -109,7 +114,7 @@ body {
     content:'';
     position: absolute;
     font-family: 'Poiret One', 'cursive';
-    color: var(--primary-title);
+    color: var(--main-color);
     font-weight: 300;
     text-transform: uppercase;
     margin-left: .5em;  
@@ -141,7 +146,7 @@ body {
     font-weight: 600;
     letter-spacing: .375em;
     text-transform: uppercase;
-    text-shadow: 0px 1px 1px var(--primary-title);
+    text-shadow: 0px 1px 1px var(--main-color);
     z-index: 99;
 }
 .main .first-name::selection, .main .last-name::selection, .main .changing::selection {
@@ -150,44 +155,47 @@ body {
 }
 .main .first-name {
     top: 49%;
-    /* left: 21%; */
-    left: 16%;
+    left: 29%;
 }
 .main .last-name {
     top: 63%;
-    left: 32%;
+    left: 40%;
 }
 .scroll-indicator {
     color: var(--light-text);
     font-size: 1.5em;
     position: absolute;
-    left: 95%;
-    top: 90%;
+    /* left: 95%;
+    top: 90%; */
+    left: 50%;
+    top: 93%;
     animation: bounce 1.5s infinite ease-in forwards;
 }
 @keyframes bounce {
     0% {
-        transform: translateX(10%);
+        /* transform: translateX(10%); */
+        transform: translateY(10%);
         opacity: 0;
     }
     25% {
         opacity: .5;
     }
     50% {
-        transform: translateX(80%);
+        /* transform: translateX(80%); */
+        transform: translateY(80%);
         opacity: 1;
     }
     75% {
         opacity: .5;
     }
     100% {
-        transform: translateX(10%);
+        /* transform: translateX(10%); */
+        transform: translateY(10%);
         opacity: 0;
     }
 }
 
 /* Page backgrounds */
-
 .bepop {
     background: linear-gradient(
         215deg,
@@ -213,7 +221,6 @@ body {
 }
 
 /* Card and contents of card */
-
 .card {
     display: flex;
     padding: 1.4rem 2.4rem;
