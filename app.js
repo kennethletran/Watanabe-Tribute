@@ -1,12 +1,3 @@
-// Scroll indicator appears after a few seconds
-const biography = document.querySelector('.biography');
-function addScrollIndicator() {
-    const scrollIndicator = biography.lastElementChild;
-    scrollIndicator.classList.add('scroll-indicator')
-}
-setTimeout(addScrollIndicator, 5000);
-
-
 // Fade in elements on scroll
 const cards = document.querySelectorAll('.card');
 const thumbnails = document.querySelectorAll('.thumbnail-pic');

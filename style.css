@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@300;600&family=Bebas+Neue&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Nunito+Sans:wght@300;600&family=Poiret+One&display=swap');
 
 /* Variables */
 html {
@@ -45,7 +45,7 @@ padding: 0;
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: .2em
+    width: .2em;
 }
 ::-webkit-scrollbar-track {
     opacity: 0;
@@ -57,7 +57,8 @@ padding: 0;
 
 body {
     background-color: var(--dark-bg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%231b1b1b' stroke-width='6.7' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");    /* background by SVGBackgrounds.com */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%231b1b1b' stroke-width='6.7' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    /* background by SVGBackgrounds.com */
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -74,24 +75,22 @@ body {
 
 /* Landing Page */
 .main {
-    position: relative;
+    position: relative; 
 }
 .main img {
     filter: brightness(.7);
     border-radius: .3em;
-    position: absolute;
-    top: 9%;
-    left: 59%;
-    z-index: 0;
+    opacity: .6;
 }
 .changing {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Poiret One', 'cursive';
     color: var(--light-text);
     position: absolute;
     top: 24%;
-    left: 8%;
+    left: 5%;
     letter-spacing: var(--spacing);
-    font-size: 2em;
+    font-size: 3.5em;
+    text-transform: uppercase;
     z-index: 99;
 }
 .changing::after {
@@ -101,7 +100,7 @@ body {
     color: var(--main-color);
     font-weight: 300;
     text-transform: uppercase;
-    margin-left: .5em;  
+    margin-left: .5em;
     letter-spacing: var(--spacing);
     animation: change 5s infinite ease-in-out forwards;
 }
@@ -122,28 +121,32 @@ body {
         content: 'director';
     }
 }
-.main .first-name, .main .last-name {
+.first-name, .last-name {
     position: absolute;
-    color: var(--light-text);
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2.75em;
+    color: var(--dark-bg);
+    text-shadow:
+    -1px -1px 0 var(--main-color),  
+     1px -1px 0 var(--main-color),
+     -1px 1px 0 var(--main-color),
+      1px 1px 0 var(--main-color);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 5em;
     font-weight: 600;
     letter-spacing: var(--spacing);
     text-transform: uppercase;
-    text-shadow: 0px 1px 1px var(--main-color);
-    z-index: 99;
+    z-index: -1;
 }
-.main .first-name::selection, .main .last-name::selection, .main .changing::selection, .main img::selection {
-    color: var(--dark-text);
+.first-name::selection, .last-name::selection, .changing::selection, img::selection {
+    color: var(--dark-bg);
     background-color: var(--main-color);
 }
 .main .first-name {
     top: 49%;
-    left: 29%;
+    left: 13%;
 }
 .main .last-name {
-    top: 63%;
-    left: 40%;
+    top: 70%;
+    left: 52%;
 }
 /* Bio page */
 .biography {
@@ -155,7 +158,6 @@ body {
     grid-template-columns: minmax(300px, 75%) 1fr;
     place-items: center start;
 }
-/* Arrow */
 .biography span {
     font-size: 1.5em;
     opacity: 0;
@@ -175,34 +177,6 @@ body {
     max-width: 40ch;
     line-height: 1.6em;
 }
-.scroll-indicator {
-    color: var(--light-text);
-    font-size: 1em;
-    position: absolute;
-    left: 50%;
-    top: 91%;
-    animation: bounce 1.5s infinite ease-in forwards;
-}
-@keyframes bounce {
-    0% {
-        transform: translateY(10%);
-        opacity: 0;
-    }
-    25% {
-        opacity: .5;
-    }
-    50% {
-        transform: translateY(80%);
-        opacity: 1;
-    }
-    75% {
-        opacity: .5;
-    }
-    100% {
-        transform: translateY(10%);
-        opacity: 0;
-    }
-}
 
 .bio p::selection, .filmography p::selection, .filmography br::selection {
     background-color: var(--main-color);
@@ -214,23 +188,19 @@ body {
 }
 
 /* Card and contents of card */
-.card {
-
-    color: var(--light-text);
-    transform: scale(.6);
-    opacity: 0;
-}
 .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--light-text);
 }
 .title {
-    font-size: 2.2em;
-    font-family: 'Yanone Kaffeesatz', 'sans-serif';
+    font-size: 10em;
+    font-family: 'Nunito Sans', 'sans-serif';
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .0375em;
+    color: var(--dark-bg);
 }
 .year {
     font-weight: 300;
@@ -247,16 +217,19 @@ body {
     width: 480px;
     object-fit: contain;
     opacity: 0;
-    transform: scale(.8);
 }
 .fade-in {
 opacity: 1;
-transform: scale(1);
-transition: all 450ms ease-in;
+transition: all 450ms ease-in ;
 }
+
 /* Cowboy Bepop Card */
 .title-bepop {
-    color: hsl(var(--bepop-primary));
+    text-shadow:
+    -1px -1px 0 hsla(var(--bepop-primary)),  
+    1px -1px 0 hsla(var(--bepop-primary)),
+    -1px 1px 0 hsla(var(--bepop-primary)),
+     1px 1px 0 hsla(var(--bepop-primary));
 }
 .year-bepop {
     color: hsl(var(--bepop-secondary));
@@ -268,7 +241,11 @@ transition: all 450ms ease-in;
 
 /* Samurai Champloo Card */
 .title-champloo {
-    color: hsl(var(--champloo-secondary));
+    text-shadow:
+    -1px -1px 0 hsl(var(--champloo-secondary)),  
+    1px -1px 0 hsl(var(--champloo-secondary)),
+    -1px 1px 0 hsl(var(--champloo-secondary)),
+     1px 1px 0 hsl(var(--champloo-secondary));
 }
 .year-champloo {
     color: hsl(var(--champloo-primary));
@@ -280,7 +257,11 @@ transition: all 450ms ease-in;
 
 /* Space Dandy Card */
 .title-dandy {
-    color: hsl(var(--dandy-primary));
+    text-shadow:
+    -1px -1px 0 hsl(var(--dandy-primary)),  
+    1px -1px 0 hsl(var(--dandy-primary)),
+    -1px 1px 0 hsl(var(--dandy-primary)),
+     1px 1px 0 hsl(var(--dandy-primary));
 }
 .year-dandy {
     color: hsl(var(--dandy-secondary));
@@ -291,30 +272,36 @@ transition: all 450ms ease-in;
 }
 
 /* Media Queries */
-@media screen and (min-width: 48em) and (max-width: 61.875em) { /* between 768px and 990px */
-    .slide {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 3em;
-    }
-}
-@media screen and (max-width: 48em) { /* 768px */
+@media screen and (max-width: 48em) { /* 768px and lower */
     *, html {
         scroll-snap-type: none;
     }
-    .fa-chevron-down, .fa-chevron-down::before, .fa-chevron-down::after {
-        display: none;
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
     }
-
     .main img {
-        height: 300px;
+        height: 480px;
         width: 300px;
         object-fit: contain;
+    }
+    .changing {
+        display: relative;
+        font-size: 2em;
+        top: 80vh;
+        left: 22%;
+    }
+    .first-name, .last-name {
+        font-size: 3em;
+    }
+    .main .first-name {
+        left: 15%;
+        top: 10%;
+    }
+    .main .last-name {
+        left: 15%;
+        top: 25%;
     }
     .slide {
         height: 100vh;
@@ -325,15 +312,16 @@ transition: all 450ms ease-in;
         align-items: center;
         padding: 3em;
     }
-    .thumbnail-pic {
-        display: none;
-    }
-    
+
 }
-@media screen and (max-width: 27em) {
+@media screen and (max-width: 30em) { /* 480px and lower */
     body {
         display: flex;
         flex-direction: column;
+    }
+    .changing, .first-name, .last-name {
+        top: 50%;
+        left: 50%;
     }
     section {
         justify-content: center;
@@ -347,17 +335,13 @@ transition: all 450ms ease-in;
         place-items: center;
         padding: 1em;
     }
-    .main img {
-        top: 40%;
-        left: 15%;
-    }
-    .main .first-name{
+    .main .first-name {
         top: 60%;
-        left: 12%;
+        left: 0%;
     }
-    .main .last-name{
+    .main .last-name {
         top: 80%;
-        left: 32%;
+        left: 0%;
     }
     .changing {
         left: 30%;
@@ -384,5 +368,8 @@ transition: all 450ms ease-in;
         100% {
             content: 'director';
         }
+    }
+    .thumbnail-pic {
+        display: none;
     }
 }
