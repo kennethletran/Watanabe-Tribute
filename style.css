@@ -276,15 +276,11 @@ transition: all 450ms ease-in ;
     *, html {
         scroll-snap-type: none;
     }
-<<<<<<< HEAD
-
-=======
     .main {
         display: flex;
         flex-direction: column;
         justify-items: center;
     }
->>>>>>> master
     .main img {
         height: 480px;
         width: 300px;
