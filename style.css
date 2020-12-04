@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@600&display=swap');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@300;600&family=Bebas+Neue&family=Poiret+One&display=swap');
+
+>>>>>>> master
 /* Variables */
 html {
 
@@ -7,7 +12,13 @@ html {
 
     --dark-text: #000000;
     --light-text: #dddcdc;
+<<<<<<< HEAD
     
+=======
+    --main-color: #fb2d2d;
+
+
+>>>>>>> master
     /* steel blue  #4682b4*/
     --bepop-primary: 207, 44%, 49%;  
     /* salmon pink #ffa07a*/
@@ -23,14 +34,25 @@ html {
     /* aquamarine #61ffe2 */
     --dandy-secondary: 169, 100%, 69%;
 
+<<<<<<< HEAD
+=======
+    --spacing: .0375em;
+
+>>>>>>> master
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+<<<<<<< HEAD
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     
     /* TODO: media queries and fade in effects */
+=======
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+>>>>>>> master
 }
 /* Resets */
 *, *:before, *:after {
@@ -39,18 +61,29 @@ margin: 0;
 padding: 0;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar {
     height: .25em;
+=======
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: .2em
+>>>>>>> master
 }
 ::-webkit-scrollbar-track {
     opacity: 0;
 }
 ::-webkit-scrollbar-track-piece:start, ::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
     background: var(--light-bg);
+=======
+    background: var(--main-color);
+>>>>>>> master
 }
 
 
 body {
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
     background-color: var(--dark-bg);
@@ -68,6 +101,25 @@ body {
     border: 1rem solid var(--dark-bg);
     scroll-snap-align: start;
 }
+=======
+    background-color: var(--dark-bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%231b1b1b' stroke-width='6.7' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");    /* background by SVGBackgrounds.com */
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.slide {
+    height: 100vh;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 480px));
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1em;
+    scroll-snap-align: start;
+}
+
+/* Landing Page */
+>>>>>>> master
 .main {
     position: relative;
 }
@@ -75,6 +127,7 @@ body {
     filter: brightness(.7);
     border-radius: .3em;
     position: absolute;
+<<<<<<< HEAD
     top: 3em;
     left: 50%;
     z-index: 0;
@@ -98,10 +151,54 @@ body {
     left: 24%;
     letter-spacing: .05em;
     font-size: 2em;
+=======
+    top: 9%;
+    left: 59%;
+    z-index: 0;
+}
+.changing {
+    font-family: 'Bebas Neue', cursive;
+    color: var(--light-text);
+    position: absolute;
+    top: 24%;
+    left: 8%;
+    letter-spacing: var(--spacing);
+    font-size: 2em;
+    z-index: 99;
+}
+.changing::after {
+    content:'';
+    position: absolute;
+    font-family: 'Poiret One', 'cursive';
+    color: var(--main-color);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: .5em;  
+    letter-spacing: var(--spacing);
+    animation: change 5s infinite ease-in-out forwards;
+}
+@keyframes change {
+    0% {
+        content:'director';
+    }
+    25% {
+        content:'visionary';
+    }
+    50% {
+        content:'pioneer';
+    }
+    75% {
+        content:'legend';
+    }
+    100% {
+        content: 'director';
+    }
+>>>>>>> master
 }
 .main .first-name, .main .last-name {
     position: absolute;
     color: var(--light-text);
+<<<<<<< HEAD
     opacity: 1;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2.75em;
@@ -140,24 +237,96 @@ body {
 @keyframes bounce {
     0% {
         transform: translateX(10%);
+=======
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.75em;
+    font-weight: 600;
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+    text-shadow: 0px 1px 1px var(--main-color);
+    z-index: 99;
+}
+.main .first-name::selection, .main .last-name::selection, .main .changing::selection, .main img::selection {
+    color: var(--dark-text);
+    background-color: var(--main-color);
+}
+.main .first-name {
+    top: 49%;
+    left: 29%;
+}
+.main .last-name {
+    top: 63%;
+    left: 40%;
+}
+/* Bio page */
+.biography {
+    position: relative;
+    color: var(--light-text);
+    font-size: 1em;
+    padding: 5em;
+    display: grid;
+    grid-template-columns: minmax(300px, 75%) 1fr;
+    place-items: center start;
+}
+/* Arrow */
+.biography span {
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+.bio-title, .filmography-title {
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: var(--spacing);
+    color: var(--main-color);
+    padding: 1rem;
+}
+.bio-text, .filmography-text {
+    font-size: 1em;
+    padding: 1rem;
+    max-width: 40ch;
+    line-height: 1.6em;
+}
+.scroll-indicator {
+    color: var(--light-text);
+    font-size: 1em;
+    position: absolute;
+    left: 50%;
+    top: 91%;
+    animation: bounce 1.5s infinite ease-in forwards;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(10%);
+>>>>>>> master
         opacity: 0;
     }
     25% {
         opacity: .5;
     }
     50% {
+<<<<<<< HEAD
         transform: translateX(80%);
+=======
+        transform: translateY(80%);
+>>>>>>> master
         opacity: 1;
     }
     75% {
         opacity: .5;
     }
     100% {
+<<<<<<< HEAD
         transform: translateX(10%);
+=======
+        transform: translateY(10%);
+>>>>>>> master
         opacity: 0;
     }
 }
 
+<<<<<<< HEAD
 /* Page backgrounds */
 
 .bepop {
@@ -216,10 +385,40 @@ body {
     font-family: 'Yanone Kaffeesatz', 'sans-serif';
     font-weight: 600;
     text-transform: uppercase;
+=======
+.bio p::selection, .filmography p::selection, .filmography br::selection {
+    background-color: var(--main-color);
+
+}
+.bio h1::selection, .filmography h1::selection {
+    background-color: var(--main-color);
+    color: var(--light-text);
+}
+
+/* Card and contents of card */
+.card {
+
+    color: var(--light-text);
+    transform: scale(.6);
+    opacity: 0;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    font-size: 2.2em;
+    font-family: 'Yanone Kaffeesatz', 'sans-serif';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .0375em;
+>>>>>>> master
 }
 .year {
     font-weight: 300;
     font-style: italic;
+<<<<<<< HEAD
     line-height: 1.8em;
 }
 .studio {
@@ -295,4 +494,156 @@ body {
 }
 .thumbnail-dandy {
     margin-left: auto;
+=======
+    line-height: 1.6em;
+}
+.description {
+    padding-top: .7em;
+    max-width: 30ch;
+    line-height: 2em;
+}
+.thumbnail-pic {
+    height: 260px;
+    width: 480px;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(.8);
+}
+.fade-in {
+opacity: 1;
+transform: scale(1);
+transition: all 450ms ease-in;
+}
+/* Cowboy Bepop Card */
+.title-bepop {
+    color: hsl(var(--bepop-primary));
+}
+.year-bepop {
+    color: hsl(var(--bepop-secondary));
+}
+.bepop h1::selection, .bepop span::selection, .bepop p::selection, .bepop img::selection {
+    color: var(--light-text);
+    background: hsla(var(--bepop-primary), 0.8);
+}
+
+/* Samurai Champloo Card */
+.title-champloo {
+    color: hsl(var(--champloo-secondary));
+}
+.year-champloo {
+    color: hsl(var(--champloo-primary));
+}
+.champloo h1::selection, .champloo span::selection, .champloo p::selection, .champloo img::selection {
+    color: var(--dark-text);
+    background: hsla(var(--champloo-secondary), 0.8);
+}
+
+/* Space Dandy Card */
+.title-dandy {
+    color: hsl(var(--dandy-primary));
+}
+.year-dandy {
+    color: hsl(var(--dandy-secondary));
+}
+.dandy h1::selection, .dandy span::selection, .dandy p::selection, .dandy img::selection {
+    color: var(--light-text);
+    background: hsla(var(--dandy-primary), 0.8);
+}
+
+/* Media Queries */
+@media screen and (min-width: 48em) and (max-width: 61.875em) { /* between 768px and 990px */
+    .slide {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 3em;
+    }
+}
+@media screen and (max-width: 48em) { /* 768px */
+    *, html {
+        scroll-snap-type: none;
+    }
+    .fa-chevron-down, .fa-chevron-down::before, .fa-chevron-down::after {
+        display: none;
+    }
+
+    .main img {
+        height: 300px;
+        width: 300px;
+        object-fit: contain;
+    }
+    .slide {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3em;
+    }
+    .thumbnail-pic {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 27em) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    section {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .biography {
+        height: 120vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 480px));
+        place-items: center;
+        padding: 1em;
+    }
+    .main img {
+        top: 40%;
+        left: 15%;
+    }
+    .main .first-name{
+        top: 60%;
+        left: 12%;
+    }
+    .main .last-name{
+        top: 80%;
+        left: 32%;
+    }
+    .changing {
+        left: 30%;
+        top: 5%;
+    }
+    .changing::after {
+        left: -15%;
+        top: 120%;
+        animation: change 5s infinite ease-in-out forwards;
+    }
+    @keyframes change {
+        0% {
+            content:'director';
+        }
+        25% {
+            content:'producer';
+        }
+        50% {
+            content:'legend';
+        }
+        75% {
+            content:'pioneer';
+        }
+        100% {
+            content: 'director';
+        }
+    }
+>>>>>>> master
 }
