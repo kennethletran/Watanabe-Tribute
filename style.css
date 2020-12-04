@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@600&display=swap');
-=======
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Yanone+Kaffeesatz:wght@300;600&family=Bebas+Neue&family=Poiret+One&display=swap');
 
->>>>>>> master
 /* Variables */
 html {
 
@@ -12,13 +8,9 @@ html {
 
     --dark-text: #000000;
     --light-text: #dddcdc;
-<<<<<<< HEAD
-    
-=======
     --main-color: #fb2d2d;
 
 
->>>>>>> master
     /* steel blue  #4682b4*/
     --bepop-primary: 207, 44%, 49%;  
     /* salmon pink #ffa07a*/
@@ -34,25 +26,15 @@ html {
     /* aquamarine #61ffe2 */
     --dandy-secondary: 169, 100%, 69%;
 
-<<<<<<< HEAD
-=======
     --spacing: .0375em;
 
->>>>>>> master
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-<<<<<<< HEAD
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    
-    /* TODO: media queries and fade in effects */
-=======
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
     
->>>>>>> master
 }
 /* Resets */
 *, *:before, *:after {
@@ -61,47 +43,19 @@ margin: 0;
 padding: 0;
 }
 
-<<<<<<< HEAD
-::-webkit-scrollbar {
-    height: .25em;
-=======
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: .2em
->>>>>>> master
 }
 ::-webkit-scrollbar-track {
     opacity: 0;
 }
 ::-webkit-scrollbar-track-piece:start, ::-webkit-scrollbar-thumb {
-<<<<<<< HEAD
-    background: var(--light-bg);
-=======
     background: var(--main-color);
->>>>>>> master
 }
 
 
 body {
-<<<<<<< HEAD
-    margin: 0;
-    padding: 0;
-    background-color: var(--dark-bg);
-    overflow-y: hidden;
-    display: flex;
-    overflow-x: scroll;
-}
-.slide {
-    height: 100vh;
-    min-width: 100vw;
-    border-radius: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1rem solid var(--dark-bg);
-    scroll-snap-align: start;
-}
-=======
     background-color: var(--dark-bg);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%231b1b1b' stroke-width='6.7' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");    /* background by SVGBackgrounds.com */
     overflow-x: hidden;
@@ -119,7 +73,6 @@ body {
 }
 
 /* Landing Page */
->>>>>>> master
 .main {
     position: relative;
 }
@@ -127,31 +80,6 @@ body {
     filter: brightness(.7);
     border-radius: .3em;
     position: absolute;
-<<<<<<< HEAD
-    top: 3em;
-    left: 50%;
-    z-index: 0;
-    /* box-shadow:
-    1px -1px 1px #61ffe2,
-    2px -1px 1px #61ffe2,
-    -1px 1px 1px #ff61ca,
-    -1px 1px 1px #ff61ca; */
-}
-.main span {
-    font-size: 1.5em;
-    opacity: 0;
-}
-.main .changing {
-    font-family: 'Quicksand', sans-serif;
-    opacity: 1;
-    color: var(--light-text);
-    position: absolute;
-    z-index: 99;
-    top: 24%;
-    left: 24%;
-    letter-spacing: .05em;
-    font-size: 2em;
-=======
     top: 9%;
     left: 59%;
     z-index: 0;
@@ -193,51 +121,10 @@ body {
     100% {
         content: 'director';
     }
->>>>>>> master
 }
 .main .first-name, .main .last-name {
     position: absolute;
     color: var(--light-text);
-<<<<<<< HEAD
-    opacity: 1;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2.75em;
-    font-weight: 600;
-    letter-spacing: .375em;
-    text-transform: uppercase;
-    text-shadow: 
-    1px 1px 2px #61ffe2,
-    -1px -1px 2px #ff61ca
-    ;
-    z-index: 99;
-}
-.main .first-name::selection, .main .last-name::selection, .main .changing::selection {
-    color: var(--dark-text);
-    background: var(--light-bg);
-}
-.main .first-name {
-    top: 49%;
-    /* left: 21%; */
-    left: 16%;
-}
-.main .last-name {
-    top: 63%;
-    left: 32%;
-}
-
-.scroll-indicator {
-    color: var(--light-text);
-    font-size: 1.5em;
-    position: absolute;
-    left: 95%;
-    top: 90%;
-    animation: bounce 1.5s infinite ease-in forwards;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateX(10%);
-=======
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2.75em;
     font-weight: 600;
@@ -299,93 +186,24 @@ body {
 @keyframes bounce {
     0% {
         transform: translateY(10%);
->>>>>>> master
         opacity: 0;
     }
     25% {
         opacity: .5;
     }
     50% {
-<<<<<<< HEAD
-        transform: translateX(80%);
-=======
         transform: translateY(80%);
->>>>>>> master
         opacity: 1;
     }
     75% {
         opacity: .5;
     }
     100% {
-<<<<<<< HEAD
-        transform: translateX(10%);
-=======
         transform: translateY(10%);
->>>>>>> master
         opacity: 0;
     }
 }
 
-<<<<<<< HEAD
-/* Page backgrounds */
-
-.bepop {
-    background: linear-gradient(
-        215deg,
-        hsla(var(--bepop-secondary), 0.7) 15%,
-        hsla(var(--bepop-primary), 0.6) 54%),
-        url("images/bepop_background.svg");
-    background-size: cover;
-}
-.champloo {
-    background: linear-gradient(
-        220deg,
-        hsla(var(--champloo-primary), 0.4),
-        hsla(var(--champloo-secondary), 0.6) 58%),
-        url("images/champloo_background.svg");
-}
-.dandy {
-    background: linear-gradient(
-        220deg,
-        hsla(var(--dandy-secondary), 0.5) 42%,
-        hsla(var(--dandy-primary), 0.6) 70%),
-        url("images/dandy_background.svg");
-    background-size: cover;
-}
-
-/* Card and contents of card */
-
-.card {
-    display: flex;
-    padding: 1.4rem 2.4rem;
-    height: 55vh;
-    width: 40vw;
-    font-size: 12px;
-    line-height: 1.6em;
-    letter-spacing: .1em;
-    color: white;
-    background: var(--dark-bg);
-    border-radius: 1rem;
-    box-shadow: 0 0 1.2rem .2rem hsla(182, 0%, 0%, 0.6);
-    opacity: 0;
-    /* transform: scale(.6); */
-}
-.fade-in {
-    opacity: 0.8;
-    /* transform: scale(1); */
-    transition: all 450ms ease-in;
-}
-.thumbnail {
-    width: 175px;
-    height: 175px;
-    border-radius: 50%;
-}
-.title {
-    font-size: 2.6em;
-    font-family: 'Yanone Kaffeesatz', 'sans-serif';
-    font-weight: 600;
-    text-transform: uppercase;
-=======
 .bio p::selection, .filmography p::selection, .filmography br::selection {
     background-color: var(--main-color);
 
@@ -413,88 +231,10 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .0375em;
->>>>>>> master
 }
 .year {
     font-weight: 300;
     font-style: italic;
-<<<<<<< HEAD
-    line-height: 1.8em;
-}
-.studio {
-    padding-top: .7em;
-}
-.studio ~ span {
-    padding-top: .3em;
-}
-.description {
-    padding-top: .7em;
-    padding-bottom: .7em;
-}
-
-/* Cowboy Bepop Card */
-.bepop > .card {
-    background: var(--dark-bg);
-    color: var(--light-text);
-}
-.card-bepop {
-    margin-top: .5rem;
-    display: flex;
-    flex-direction: column;
-}
-.card-bepop .title {
-    color: hsl(var(--bepop-primary));
-}
-.card-bepop .year {
-    color: hsl(var(--bepop-secondary));
-}
-.card-bepop h1::selection, .card-bepop span::selection, .card-bepop p::selection, .thumbnail-bepop img::selection {
-    color: var(--light-text);
-    background: hsla(var(--bepop-primary), 0.8);
-}
-.thumbnail-bepop {
-    margin-left: auto;
-}
-
-/* Samurai Champloo Card */
-.card-champloo {
-    margin-top: .5rem;
-    display: flex;
-    flex-direction: column;
-}
-.card-champloo .title {
-    color: hsl(var(--champloo-secondary));
-}
-.card-champloo .year {
-    color: hsl(var(--champloo-primary));
-}
-.card-champloo h1::selection, .card-champloo span::selection, .card-champloo p::selection, .thumbnail-champloo img::selection {
-    color: var(--dark-text);
-    background: hsla(var(--champloo-secondary), 0.8);
-}
-.thumbnail-champloo {
-    margin-left: auto;
-}
-
-/* Space Dandy Card */
-.card-dandy {
-    margin-top: .5rem;
-    display: flex;
-    flex-direction: column;
-}
-.card-dandy .title {
-    color: hsl(var(--dandy-primary));
-}
-.card-dandy .year {
-    color: hsl(var(--dandy-secondary));
-}
-.card-dandy h1::selection, .card-dandy span::selection, .card-dandy p::selection, .thumbnail-dandy img::selection {
-    color: var(--light-text);
-    background: hsla(var(--dandy-primary), 0.8);
-}
-.thumbnail-dandy {
-    margin-left: auto;
-=======
     line-height: 1.6em;
 }
 .description {
@@ -566,9 +306,6 @@ transition: all 450ms ease-in;
 @media screen and (max-width: 48em) { /* 768px */
     *, html {
         scroll-snap-type: none;
-    }
-    .fa-chevron-down, .fa-chevron-down::before, .fa-chevron-down::after {
-        display: none;
     }
 
     .main img {
@@ -645,5 +382,4 @@ transition: all 450ms ease-in;
             content: 'director';
         }
     }
->>>>>>> master
 }
