@@ -1,28 +1,31 @@
 // Scroll indicator appears after a few seconds
-const main = document.querySelector('.main');
+const biography = document.querySelector('.biography');
 function addScrollIndicator() {
-    const scrollIndicator = main.lastElementChild;
+    const scrollIndicator = biography.lastElementChild;
     scrollIndicator.classList.add('scroll-indicator')
 }
-setTimeout(addScrollIndicator, 2000);
+setTimeout(addScrollIndicator, 5000);
 
 
-// Have card fade in when scrolled to page
+// Fade in elements on scroll
 const cards = document.querySelectorAll('.card');
-function cardFadeObserver(cards) {
-    cards.forEach(card => {
-        if(!card.isIntersecting) {
+const thumbnails = document.querySelectorAll('.thumbnail-pic');
+
+function elementFadeObserver(entries) {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
             return;
         } else {
-            card.target.classList.add('fade-in');
-            appearOnScroll.unobserve(card.target);
+            entry.target.classList.add('fade-in');
+            appearOnScroll.unobserve(entry.target);
         }
     });
 }
-const appearOnScroll = new IntersectionObserver(cardFadeObserver, { threshold: 1 });
+const appearOnScroll = new IntersectionObserver(elementFadeObserver, { threshold: 1 });
+
 cards.forEach(card => {
     appearOnScroll.observe(card);
 })
-
-
-// Type in name
+thumbnails.forEach(thumbnail => {
+    appearOnScroll.observe(thumbnail);
+})
